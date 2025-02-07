@@ -1,0 +1,66 @@
+{
+  "name": "basic",
+  "description": "Basic setup with TypeScript (React)",
+  "version": "6.1.6",
+  "author": {
+    "name": "Bryntum",
+    "url": "https://bryntum.com",
+    "email": "info@bryntum.com"
+  },
+  "license": "commercial",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postinstall": "postinstall"
+  },
+  "postinstall": {
+    "node_modules/@bryntum/demo-resources/images/favicon.png": "copy public/favicon.png",
+    "node_modules/@bryntum/demo-resources/images/users/*": "copy public/users/",
+    "node_modules/@bryntum/schedulerpro/*.css*": "copy public/themes/",
+    "node_modules/@bryntum/schedulerpro/fonts/*": "copy public/themes/fonts/"
+  },
+  "dependencies": {
+    "@bryntum/demo-resources": "1.4.0",
+    "@bryntum/schedulerpro": "npm:@bryntum/schedulerpro-trial@^6.1.6",
+    "@bryntum/schedulerpro-react": "^6.1.6",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@types/node": "12.6.8",
+    "@types/react-dom": "16.8.5",
+    "antd": "^5.23.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "3.9.7"
+  },
+  "devDependencies": {
+    "babel-preset-react-app": "npm:@bryntum/babel-preset-react-app@10.0.0",
+    "postinstall": "0.7.4",
+    "sass": "1.42.1"
+  },
+  "overrides": {
+    "caniuse-lite": "1.0.30001632"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "browserslist": {
+    "production": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig-disabled": {
+    "extends": "react-app"
+  }
+}
